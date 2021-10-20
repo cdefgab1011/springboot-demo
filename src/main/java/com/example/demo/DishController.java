@@ -11,7 +11,7 @@ public class DishController {
     private final DishRepository dishRepository;
 
     @GetMapping("/getAllDishes")
-    Iterable<Dish> getAllDishes() {
+    public Iterable<Dish> getAllDishes() {
         return dishRepository.findAll();
     }
 }
