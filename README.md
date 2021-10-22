@@ -10,5 +10,6 @@ mysql -h127.0.0.1 -uroot -P3306 -p
 ```shell script
 docker run --name redis-test-instance -p6379:6379 -d redis:latest
 
+#redis-server --daemonize yes
 redis-cli
 ```

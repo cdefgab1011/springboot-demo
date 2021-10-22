@@ -2,10 +2,12 @@ package com.example.demo;
 
 import com.sun.tools.javac.util.List;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
 
 @Component
+@Transactional(transactionManager = "mysqlTransactionManager")
 class DataLoader {
     private final DishRepository dishRepository;
 
