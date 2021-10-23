@@ -2,17 +2,18 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Weather;
 import com.example.demo.service.WeatherService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/weather")
 @RestController
+@RequestMapping("/weather")
+@RequiredArgsConstructor
 public class WeatherController {
 
-    @Autowired
-    private WeatherService weatherService;
+    private final WeatherService weatherService;
 
     /**
      * create database and table

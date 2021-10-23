@@ -24,7 +24,7 @@
     <select id="select" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from testSupp
+        from test.weather
         order by ts desc
         <if test="limit != null">
             limit #{limit,jdbcType=BIGINT}
