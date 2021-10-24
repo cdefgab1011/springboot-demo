@@ -2,18 +2,18 @@ package com.example.demo.service;
 
 import com.example.demo.entity.Dish;
 import com.example.demo.mapper.mysql.DishMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 @Transactional(transactionManager = "mysqlTransactionManager")
 public class DishService {
 
-    @Autowired
-    private DishMapper dishMapper;
+    private final DishMapper dishMapper;
 
     public boolean init() {
 

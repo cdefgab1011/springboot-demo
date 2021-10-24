@@ -3,18 +3,18 @@ package com.example.demo.service;
 
 import com.example.demo.entity.Weather;
 import com.example.demo.mapper.tdengine.WeatherMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 @Transactional(transactionManager = "tdengineTransactionManager")
 public class WeatherService {
 
-    @Autowired
-    private WeatherMapper weatherMapper;
+    private final WeatherMapper weatherMapper;
 
     public boolean init() {
 
