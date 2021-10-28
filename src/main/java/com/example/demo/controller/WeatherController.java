@@ -3,7 +3,6 @@ package com.example.demo.controller;
 import com.example.demo.entity.Weather;
 import com.example.demo.service.WeatherService;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
